@@ -1,6 +1,7 @@
 # Assignment - Internet of Things
 
-Hardware and sensors are constantly added to our lives. Sensors produce data, data that often need to be collected and analyzed. Having a basic knowledge of IoT protocols opens many doors for exciting projects as a web developer. This assignment aims to create a thing that connects to the web, a Web Thing. 
+Hardware and sensors are constantly added to our lives. Sensors produce data, data that often need to be collected and analyzed. Having a basic knowledge of IoT protocols opens many doors for exciting projects as a web developer. This assignment aims to create a thing that connects to the web, a Web Thing.
+IOT 2023
 
 ## Description
 
@@ -10,27 +11,15 @@ Looking for inspiration? Please have a look at [some of our example projects](ht
 
 ## Requirements
 
-The requirements for the assignment are quite vague by design. There are some musts, and even they can be discussed if they are stopping you from achieving your goals.
+The requirements for the assignment are quite straightforward. But, they can be discussed if they are stopping you from achieving your goals.
 
 ### Must
 
-* The thing (preferable a microcontroller) must be connected to the web (freestanding, not relayed through a personal computer)
-* The thing must be either or both:
-    * be accessible through an API
-    * have its data presented through an API
-* Have a user interface that communicates with the API(s)
-* Be presented (see details)
-
-### Should
-
-* Have an API that follows the Web Thing Model
-
-### Could
-
-* Be presented using a public link.
-* Implement the API as an implementation of another information model (e.g. Fiware).
-* Use a time-series database to store sensor data (e.g. Influx) and add data retention.
-* In the report, analyze and reflect on your choices (hardware, protocols, information models, software, data storage, etc., in greater depth).
+* The Raspberry Pi Pico W microcontroller is connected to WiFi.
+* The Raspberry Pi Pico W microcontroller reads the temperature and humidity data of sensor DHT11.
+* The Raspberry Pi Pico W microcontroller sends the temperature and humidity data to the Adafruit MQTT Broker using the MQTT protocol. The data need to be prepared in a JSON format.
+* The Raspberry Pi Pico W microcontroller must be controlled by a button on the Adafruit dashboard i.e. if Rpi Pico W receives the command "ON" or "OFF" on the "LED" topic, the built-in LED of Rpi Pico W must be on or off.
+* Written report (PDF file) and prerecorded presentation (MP4 file). The assignment files (PDF and MP4) must follow the format:  "yourlnucode_1DV027_IoT.pdf", "yourlnucode_1DV027_IoT.mp4"
 
 ## Assignment Report
 
@@ -38,5 +27,5 @@ Your application will be presented using a "Tutorial style" assignment report. F
 
 ## Merge Request
 
-You hand in the assignment by making a Merge Request of your project against the lnu/submit-branch. It is OK to have additional projects and repositories, but include a link to them in the Submission report. 
-Pay extra attention to including a link to your Assignment Report. 
+You hand in the assignment by making a Merge Request of your project against the lnu/submit-branch. It is OK to have additional projects and repositories, but include a link to them in the Submission report.
+Pay extra attention to including a link to your Assignment Report.

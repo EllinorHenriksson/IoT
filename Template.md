@@ -28,7 +28,6 @@ Explain all material that is needed. All sensors, where you bought them and thei
 - [ ] What the different things (sensors, wires, controllers) do - short specifications
 - [ ] Where you bought them and how much they cost
 
-
 > Example:
 >| IoT Thing | For this         |
 >| --------- | ---------------- |
@@ -37,9 +36,8 @@ Explain all material that is needed. All sensors, where you bought them and thei
 >
 >In this project, I have chosen to work with the Pycom LoPy4 device, as seen in Fig. 1. It's a neat little device programmed by MicroPython and has several connectivity bands. The device has many digital and analog inputs and outputs and is well suited for an IoT project.
 >
->![LoPy!](https://pycom.io/wp-content/uploads/2018/08/lopySide-1.png =360x)
+>![LoPy!](https://pycom.io/wp-content/uploads/2018/08/lopySide-1.png=360x)
 >Fig. 1. LoPy4 with headers. Pycom.io
-
 
 ### Computer setup
 
@@ -63,12 +61,11 @@ Describe your choice of platform. If you have tried different platforms, it can 
 Is your platform based on a local installation or a cloud? Do you plan to use a paid subscription or a free one? Describe the alternatives going forward if you want to scale your idea.
 
 - [ ] Describe platform in terms of functionality
-- [ ] *Explain and elaborate on what made you choose this platform 
+- [ ] *Explain and elaborate on what made you choose this platform
 
 ### The code
 
 Import core functions of your code here, and don't forget to explain what you have done! Do not put too much code here. Focus on the core functionalities. Have you done a specific function that does a calculation, or are you using a clever function for sending data on two networks? Or, are you checking if the value is reasonable, etc.? Explain what you have done, including the setup of the network, wireless, libraries and all that is needed to understand.
-
 
 ```python=
 import this as that
@@ -81,18 +78,15 @@ s.send(package)
 # Explain your code!
 ```
 
-
 ### Data flow / Connectivity
 
 How is the data transmitted to the internet or local server? Describe the package format. All the different steps that are needed in getting the data to your end-point. Explain both the code and choice of wireless protocols and API information models, if any.
 
-
-- [ ] How often is the data sent? 
+- [ ] How often is the data sent?
 - [ ] Which wireless protocols did you use (WiFi, LoRa, etc ...)?
 - [ ] Which transport protocols were used (MQTT, webhook, etc ...)
 - [ ] Which information models were used (WoT TD, Fiware, etc...)
 - [ ] *Elaborate on the design choices regarding data transmission and wireless protocols. That is how your choices affect the device range and battery consumption.
-
 
 ### Presenting the data
 
@@ -102,7 +96,6 @@ Describe the presentation part. How is the dashboard built? How long is the data
 - [ ] How often is data saved in the database.
 - [ ] *Explain your choice of database.
 - [ ] *Automation/triggers of the data.
-
 
 ### Finalizing the design
 

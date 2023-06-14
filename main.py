@@ -47,11 +47,23 @@ def reset():
 
 # Generate temperature readings
 def get_temperature_reading():
-    return sensor.temperature
+    temp = None
+    while temp is None:
+        try:
+            temp = sensor.temperature
+        except Exception as error:
+            print("An exception occurred: ", error)
+    return temp
 
 # Generate humidity readings
 def get_humidity_reading():
-    return sensor.humidity
+    humidity = None
+    while humidity is None:
+        try:
+            humidity = sensor.humidity
+        except Exception as error:
+            print("An exception occurred: ", error)
+    return humidity
 
 def main():
     print(f"Begin connection with MQTT Broker :: {MQTT_BROKER}")

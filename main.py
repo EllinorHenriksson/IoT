@@ -7,12 +7,9 @@ from dht import DHT11
 import json
 import project_secrets
 
-
-# Default  MQTT_BROKER to connect to
-CLIENT_ID = ubinascii.hexlify(machine.unique_id()) #To create an MQTT client, we need to get the PICOW unique ID
-MQTT_BROKER = "io.adafruit.com" # MQTT broker IP address or DNS  
-#EXAMPLE IP ADDRESS
-#MQTT_BROKER = '192.168.1.144'
+# MQTT Broker connection details
+CLIENT_ID = ubinascii.hexlify(machine.unique_id())
+MQTT_BROKER = "io.adafruit.com"
 PORT = 1883
 SUBSCRIBE_TOPIC = b"ellinor_henriksson/feeds/led"
 PUBLISH_TOPIC = b"ellinor_henriksson/groups/temperatureandhumidity/json"
@@ -24,11 +21,9 @@ led = machine.Pin("LED", machine.Pin.OUT)
 pin = machine.Pin(28, machine.Pin.OUT, machine.Pin.PULL_DOWN)
 sensor = DHT11(pin)
 
-
 # Publish MQTT messages after every set timeout
-LAST_PUBLISH = time.time()  # last_publish variable will hold the last time a message was sent.
-publish_interval = 5 #5 seconds --> this means a new message will be sent every 5 seconds
-
+LAST_PUBLISH = time.time()
+publish_interval = 5
 
 # Received messages from subscriptions will be delivered to this callback
 def sub_cb(topic, msg):
@@ -37,7 +32,6 @@ def sub_cb(topic, msg):
         led.value(1)
     else:
         led.value(0)
-
 
 # if PicoW Failed to connect to MQTT broker. Reconnecting...'
 def reset():
